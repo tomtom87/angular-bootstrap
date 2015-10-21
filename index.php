@@ -13,9 +13,13 @@
 
 get_header(); ?>
 
+<div ng-view></div>
+
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
+		<!-- ng-repeat posts here -->
+		<!-- create the post from partials depending on get_post_format -->
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php
