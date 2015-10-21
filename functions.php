@@ -121,8 +121,8 @@ function _tk_scripts() {
 	wp_enqueue_script('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
 	wp_enqueue_script('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');
 	wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'angularjs', 'angularjs-route' ));
-	
-	wp_localize_script('_tk_scripts', 'localized',
+
+	wp_localize_script('scripts', 'localized',
 			array(
 				'partials' => trailingslashit( get_template_directory_uri() ) . 'partials/'
 				)
