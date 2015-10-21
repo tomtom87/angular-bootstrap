@@ -49,7 +49,7 @@ function _tk_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-	
+
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
@@ -116,6 +116,10 @@ function _tk_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( '_tk-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
+	//Load angular
+	wp_enqueue_script ('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
+	wp_enqueue_script ('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');
 
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );
