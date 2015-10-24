@@ -15,6 +15,7 @@ get_header(); ?>
 <div ng-controller="Main">
 	<div ng-view></div>
 </div>
+
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
