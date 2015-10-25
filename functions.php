@@ -126,7 +126,7 @@ function _tk_scripts() {
 
 	wp_localize_script('scripts', 'localized',
 			array(
-				'partials' => 'http://thaital.com:3000/wp-content/themes/angular-bootstrap/partials/'
+				'partials' => 'http://full-url-here.com/wp-content/themes/angular-bootstrap/partials/'
 				)
 	);
 
