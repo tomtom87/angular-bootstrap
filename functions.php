@@ -120,13 +120,16 @@ function _tk_scripts() {
 	//Load angular
 	wp_enqueue_script('angularjs', get_template_directory_uri() .'/node_modules/angular/angular.min.js');
 	wp_enqueue_script('angularjs-route', get_template_directory_uri() .'/node_modules/angular-route/angular-route.min.js');
+	wp_enqueue_script('angularjs-sanitize', get_stylesheet_directory_uri() . '/node_modules/angular-sanitize/angular-sanitize.min.js');
 	wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'angularjs', 'angularjs-route' ));
+	wp_enqueue_script('theme-service', get_stylesheet_directory_uri() . '/js/services.js');
 
 	wp_localize_script('scripts', 'localized',
 			array(
 				'partials' => 'http://thaital.com:3000/wp-content/themes/angular-bootstrap/partials/'
 				)
 	);
+
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );
 
